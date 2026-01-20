@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Tracker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+</head>
+<body>
+
+<div class="bg-blobs"></div>
+
+<div class="container">
+  
+
+    <div class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/2010/2010990.png" alt="DSA">
+        <h1>DSA Problem Tracker</h1>
+        <p>Track • Analyze • Crack Interviews 🚀</p>
+    </div><br>
+    <div class="filter">
+    <select id="filterTopic" onchange="applyFilter()">
+        <option value="All">All Topics</option>
+        <option>Array</option>
+        <option>String</option>
+        <option>Stack</option>
+        <option>Queue</option>
+        <option>Linked List</option>
+        <option>DP</option>
+    </select>
+    <select id="filterLevel" onchange="applyFilter()">
+        <option value="All">All Levels</option>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+    </select>
+</div>
+
+
+    <div class="card">
+        <input type="text" id="problem" placeholder="📘 Problem Name">
+        <select id="topic">
+            <option>Array</option>
+            <option>String</option>
+            <option>Stack</option>
+            <option>Queue</option>
+            <option>Binary Search</option>
+            <option>Trees</option>
+            <option>Graph</option>
+            <option>Linked List</option>
+            <option>DP</option>
+        </select>
+        <select id="level">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+        <button onclick="addProblem()">
+            <i class="fa-solid fa-plus"></i> Add
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Problem</th>
+                <th>Topic</th>
+                <th>Level</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
